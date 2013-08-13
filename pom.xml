@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.github.davidcarboni</groupId>
+	<groupId>com.github.pzelnip</groupId>
 	<artifactId>releaser</artifactId>
 	<version>0.0.4-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -10,7 +10,7 @@
 		An example for getting your GitHub project to Maven Central. Demonstrates required POM information and release plugin configuration. 
 		Many thanks to: http://datumedge.blogspot.co.uk/2012/05/publishing-from-github-to-maven-central.html
 	</description>
-	<url>https://github.com/davidcarboni/releaser</url>
+	<url>https://github.com/pzelnip/releaser</url>
 
 	<!-- Required: license information: -->
 	<licenses>
@@ -176,6 +176,7 @@
 	<profiles>
 
 		<!-- GPG Signature on release -->
+<!--
 		<profile>
 			<id>release-sign-artifacts</id>
 			<activation>
@@ -203,18 +204,18 @@
 				</plugins>
 			</build>
 		</profile>
-
+-->
 	</profiles>
 
 	<!-- Required: developer information: -->
 	<developers>
 		<developer>
 			<id>david</id>
-			<name>David Carboni</name>
-			<email>david@carboni.co</email>
-			<organization>Carboni</organization>
-			<organizationUrl>https://github.com/davidcarboni</organizationUrl>
-			<url>https://github.com/davidcarboni</url>
+			<name>Adam Parkin</name>
+			<email>pzelnip@gmail.com</email>
+			<organization>Pzelnip</organization>
+			<organizationUrl>https://github.com/pzelnip</organizationUrl>
+			<url>https://github.com/pzelnip</url>
 		</developer>
 	</developers>
 
