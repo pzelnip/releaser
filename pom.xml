@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.pzelnip</groupId>
 	<artifactId>releaser</artifactId>
-	<version>0.0.5</version>
+	<version>0.0.6-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>Releaser</name>
 	<description>
@@ -26,7 +26,7 @@
 		<url>https://github.com/pzelnip/releaser</url>
 		<connection>scm:git:git://github.com/pzelnip/releaser.git</connection>
 		<developerConnection>scm:git:git@github.com:pzelnip/releaser.git</developerConnection>
-		<tag>releaser-0.0.5</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<distributionManagement>
