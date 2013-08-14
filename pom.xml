@@ -11,23 +11,13 @@
 	</description>
 	<url>https://github.com/pzelnip/releaser</url>
 
-	<!-- Required: license information: -->
-	<licenses>
-		<license>
-			<name>The Apache Software License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>repo</distribution>
-			<comments>A business-friendly OSS license</comments>
-		</license>
-	</licenses>
-
-	<!-- Required: source control information: -->
+	<!-- Required: source control information: 
 	<scm>
 		<url>https://github.com/pzelnip/releaser</url>
 		<connection>scm:git:git://github.com/pzelnip/releaser.git</connection>
 		<developerConnection>scm:git:git@github.com:pzelnip/releaser.git</developerConnection>
 		<tag>HEAD</tag>
-	</scm>
+	</scm>-->
 
 	<distributionManagement>
 		<!-- You'll probably want to test this out with a local copy of Nexus OSS. -->
@@ -43,16 +33,6 @@
 			<name>Local Nexus release repository</name>
 			<url>http://localhost:8081/nexus/content/repositories/releases/</url>
 		</repository>
-<!-- 		<snapshotRepository> -->
-<!-- 			<id>sonatype-nexus-snapshots</id> -->
-<!-- 			<name>Sonatype Nexus snapshot repository</name> -->
-<!-- 			<url>https://oss.sonatype.org/content/repositories/snapshots</url> -->
-<!-- 		</snapshotRepository> -->
-<!-- 		<repository> -->
-<!-- 			<id>sonatype-nexus-staging</id> -->
-<!-- 			<name>Sonatype Nexus release repository</name> -->
-<!-- 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url> -->
-<!-- 		</repository> -->
 	</distributionManagement>
 
 	<properties>
@@ -149,73 +129,9 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.4.1</version>
-				<configuration>
-
-					<!-- Automated passphrase entry: -->
-
-					<!-- To pass your passphrase to the build automatically, so avoiding 
-						manual interaction, you'll need to put the passphrase into settings.xml. 
-						You don't really want that to be in plain text, so you'll want to follow: 
-						http://maven.apache.org/guides/mini/guide-encryption.html -->
-					<!-- <arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments> -->
-
-					<!-- Manual passphrase entry: -->
-
-					<!-- This is the simplest secure solution, but requires you to type 
-						your key passphrase in manually when performing a release. No biggie unless 
-						you want your CI server to decide when to release for you. -->
-					<mavenExecutorId>forked-path</mavenExecutorId>
-
-				</configuration>
 			</plugin>
 
 		</plugins>
 	</build>
-
-	<profiles>
-
-		<!-- GPG Signature on release -->
-<!--
-		<profile>
-			<id>release-sign-artifacts</id>
-			<activation>
-				<property>
-					<name>performRelease</name>
-					<value>true</value>
-				</property>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-gpg-plugin</artifactId>
-						<version>1.4</version>
-						<executions>
-							<execution>
-								<id>sign-artifacts</id>
-								<phase>verify</phase>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
--->
-	</profiles>
-
-	<!-- Required: developer information: -->
-	<developers>
-		<developer>
-			<id>david</id>
-			<name>Adam Parkin</name>
-			<email>pzelnip@gmail.com</email>
-			<organization>Pzelnip</organization>
-			<organizationUrl>https://github.com/pzelnip</organizationUrl>
-			<url>https://github.com/pzelnip</url>
-		</developer>
-	</developers>
 
 </project>
