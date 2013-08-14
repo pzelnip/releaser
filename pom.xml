@@ -13,9 +13,7 @@
 
 	<!-- Required: source control information: -->
 	<scm>
-		<url>https://github.com/pzelnip/releaser</url>
 		<developerConnection>scm:git:git@github.com:pzelnip/releaser.git</developerConnection>
-    <tag>HEAD</tag>
   </scm>
 
 	<distributionManagement>
